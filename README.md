@@ -1,7 +1,9 @@
-# Docker: Node & MongoDB sample
-### (from devops, to production)
+# Docker: DevOp LAMP
+> from development to production workflow
 
-> Simple example of a dockerized Node/Mongo app
+[Docker: Dev to Production playlist](https://www.youtube.com/playlist?list=PLETG2T1KvniqIEU_xkadLpugT8nhmNxSR "Easy Docker Dev to Production Setup for Small Projects")   
+[How to create a docker-based LAMP stack using docker-compose on Ubuntu 18.04 Bionic Beaver Linux](https://linuxconfig.org/how-to-create-a-docker-based-lamp-stack-using-docker-compose-on-ubuntu-18-04-bionic-beaver-linux "Following this tutorial you will be able to create a LAMP environment using the Docker technology.")  
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")  
 
 ## Quick Start  
 ```bash
@@ -26,7 +28,3 @@ docker-compose build
 # Run in Docker
 docker-compose -f docker-compose-production.yml up -d --build
 ```
-
-[Docker: Dev to Production playlist](https://www.youtube.com/playlist?list=PLETG2T1KvniqIEU_xkadLpugT8nhmNxSR "Easy Docker Dev to Production Setup for Small Projects")   
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")  
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")  
