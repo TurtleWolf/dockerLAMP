@@ -1,0 +1,45 @@
+version: '3'
+services:
+    php-apache:
+        build:
+            context: ./php-apache
+        ports:
+            -  80:80
+        volumes:
+            - ./DocumentRoot:/var/www/html
+        links:
+            - 'mariadb'
+
+    mariadb:
+        image: mariadb:10.1
+        volumes:
+          - mariadb:/var/lib/mysql
+        environment:
+          TZ: "Europe/Rome"
+          MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+          MYSQL_ROOT_PASSWORD: "rootpwd"
+          MYSQL_USER: 'testuser'
+          MYSQL_PASSWORD: 'testpassword'
+          MYSQL_DATABASE: 'testdb'
+
+volumes:
+    mariadb:
+      
+  # app:
+  #   container_name: docker-node-mongo
+  #   restart: always
+  #   build: .
+  #   volumes: ['./:/usr/src/app']
+  #   # image: app:1.0.0
+  #   ports:
+  #     - '80:3000'
+  #   links:
+  #     - mongo
+  
+  # mongo:
+  #   container_name: mongo
+  #   # instead of building from Dockerfile,
+  #   #image: will pull from dockerhub
+  #   image: mongo
+  #   ports:
+  #     - '27017:27017'
